@@ -26,7 +26,7 @@ class TourGuideSkill(MycroftSkill):
 
 
 		def handle_fun_fact_villanova_intent(self, message):
-				self.speak_dialog("fun.fact.villanova")
+				self_speak_dialog("fun.fact.villanova")
 
 		def handle_college_majors_intent(self, message):
 				self_speak_dialog("college.majors")
