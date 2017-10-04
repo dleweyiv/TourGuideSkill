@@ -1,0 +1,7 @@
+{	
+	"utterance": "Fun fact",
+	"intent_type": "FunFactVillanovaIntent",
+	"intent": {
+			"FunFactVillanovaKeyword": "fun fact villanova"
+	}
+}
