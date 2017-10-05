@@ -55,10 +55,10 @@ class TourGuideSkill(MycroftSkill):
 				self.speak_dialog("college.minors")
 
 		def handle_engineering_resources_intent(self, message):
-				self.speak_dialog("college.majors")
+				self.speak_dialog("engineering.resources")
 
 		def handle_engineering_projects_trips_intent(self, message):
-				self.speak_dialog("college.majors")
+				self.speak_dialog("engineering.projects.trips")
 
 		def stop(self):
 				pass
