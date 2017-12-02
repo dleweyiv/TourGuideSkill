@@ -2,6 +2,11 @@
 # This file is part of the Villanova tour guide mrcroft skill
 from os.path import dirname
 
+import sys
+import requests
+import json
+import threading
+
 from adapt.intent import IntentBuilder
 
 from mycroft.skills.core import MycroftSkill
@@ -464,6 +469,10 @@ class TourGuideSkill(MycroftSkill):
 
 		def handle_college_majors_intent(self, message):
 				self.speak_dialog("college.majors")
+				GPIO.set("GPIO","On")
+				GPIO.set("GPIO","Off")
+				GPIO.set("GPIO","On")
+				GPIO.set("GPIO","Off")
 
 		def handle_college_minors_intent(self, message):
 				self.speak_dialog("college.minors")
