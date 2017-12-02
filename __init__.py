@@ -469,10 +469,10 @@ class TourGuideSkill(MycroftSkill):
 
 		def handle_college_majors_intent(self, message):
 				self.speak_dialog("college.majors")
-				GPIO.set("GPIO","On")
-				GPIO.set("GPIO","Off")
-				GPIO.set("GPIO","On")
-				GPIO.set("GPIO","Off")
+				GPIO.set("GPIO1","On")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
 
 		def handle_college_minors_intent(self, message):
 				self.speak_dialog("college.minors")

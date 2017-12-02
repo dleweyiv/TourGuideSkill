@@ -20,26 +20,26 @@ def set(key,value):
 	GPIO_STATE[key] = value
 	if (key == "GPIO1") and pi_interface:
 		if value.uppper() == "ON":
-			GPIO.output(6,GPIO.HIGH)
+			GPIO.output(31,GPIO.HIGH)
 		else:
-			GPIO.output(6,GPIO.LOW)
+			GPIO.output(31,GPIO.LOW)
 
 	if (key == "GPIO2") and pi_interface:
 		if value.uppper() == "ON":
-			GPIO.output(13,GPIO.HIGH)
+			GPIO.output(33,GPIO.HIGH)
 		else:
-			GPIO.output(13,GPIO.LOW)
+			GPIO.output(33,GPIO.LOW)
 
 	if (key == "GPIO3") and pi_interface:
 		if value.uppper() == "ON":
-			GPIO.output(19,GPIO.HIGH)
+			GPIO.output(35,GPIO.HIGH)
 		else:
-			GPIO.output(19,GPIO.LOW)
+			GPIO.output(35,GPIO.LOW)
 
 	if (key == "GPIO4") and pi_interface:
 		if value.uppper() == "ON":
-			GPIO.output(26,GPIO.HIGH)
+			GPIO.output(37,GPIO.HIGH)
 		else:
-			GPIO.output(26,GPIO.LOW)
+			GPIO.output(37,GPIO.LOW)
 	if key in GPIO_ON:
 		GPIO_ON[key]()
