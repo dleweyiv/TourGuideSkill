@@ -69,7 +69,7 @@ class TourGuideSkill(MycroftSkill):
 
 				# ---------------------------------------------------------------------------------
 
-				college_liberal_arts_average_salary_intent = IntentBuilder("CollegeLiberalArtsAverageSalarayIntent"). \
+				college_liberal_arts_average_salary_intent = IntentBuilder("CollegeLiberalArtsAverageSalaryIntent"). \
 						require("CollegeLiberalArtsAverageSalaryKeyword").build()
 				self.register_intent(college_liberal_arts_average_salary_intent, self.handle_college_liberal_arts_average_salary_intent)
 
@@ -504,37 +504,37 @@ class TourGuideSkill(MycroftSkill):
 		def handle_college_science_job_placement_intent(self, message):
 				self.speak_dialog("college.science.job.placement")
 
-		def handle_engineerinig_fact_intent(self, message):
+		def handle_engineering_fact_intent(self, message): # Should delete this one deff
 				self.speak_dialog("engineering.fact")
 
-		def handle_engineerinig_formula_intent(self, message):
+		def handle_engineering_formula_intent(self, message):
 				self.speak_dialog("engineering.formula")
 
-		def handle_engineerinig_freshman_curriculum_intent(self, message):
+		def handle_engineering_freshman_curriculum_intent(self, message):
 				self.speak_dialog("engineering.freshman.curriculum")
 
-		def handle_engineerinig_mini_project_intent(self, message):
+		def handle_engineering_mini_project_intent(self, message):
 				self.speak_dialog("engineering.mini.project")
 
-		def handle_engineerinig_professional_development_intent(self, message):
+		def handle_engineering_professional_development_intent(self, message):
 				self.speak_dialog("engineering.professional.development")
 
-		def handle_engineerinig_projects_trips_intent(self, message):
+		def handle_engineering_projects_trips_intent(self, message):
 				self.speak_dialog("engineering.projects.trips")
 
-		def handle_engineerinig_resources_intent(self, message):
+		def handle_engineering_resources_intent(self, message):
 				self.speak_dialog("engineering.resources")
 
-		def handle_engineerinig_service_intent(self, message):
+		def handle_engineering_service_intent(self, message):
 				self.speak_dialog("engineering.service")
 
-		def handle_engineerinig_study_abroad_intent(self, message):
+		def handle_engineering_study_abroad_intent(self, message):
 				self.speak_dialog("engineering.study.abroad")
 
-		def handle_engineerinig_undergrad_intent(self, message):
+		def handle_engineering_undergrad_intent(self, message):
 				self.speak_dialog("engineering.undergrad")
 
-		def handle_engineerinig_women_intent(self, message):
+		def handle_engineering_women_intent(self, message):
 				self.speak_dialog("engineering.women")
 
 		def handle_financial_aid_eligibility_intent(self, message):
