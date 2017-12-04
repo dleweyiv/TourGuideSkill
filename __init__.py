@@ -93,12 +93,6 @@ class TourGuideSkill(MycroftSkill):
 
 				# ---------------------------------------------------------------------------------
 
-				engineering_fact_intent = IntentBuilder("EngineeringFactIntent"). \
-						require("EngineeringFactKeyword").build()
-				self.register_intent(engineering_fact_intent, self.handle_engineering_fact_intent)
-
-				# ---------------------------------------------------------------------------------
-
 				engineering_formula_intent = IntentBuilder("EngineeringFormulaIntent"). \
 						require("EngineeringFormulaKeyword").build()
 				self.register_intent(engineering_formula_intent, self.handle_engineering_formula_intent)
@@ -107,7 +101,7 @@ class TourGuideSkill(MycroftSkill):
 
 				engineering_freshman_curriculum_intent = IntentBuilder("EngineeringFreshmanCurriculumIntent"). \
 						require("EngineeringFreshmanCurriculumKeyword").build()
-				self.register_intent(engineering_freshman_curriculum_intent, self.handle_engineering_freshmann_curriculum_intent)
+				self.register_intent(engineering_freshman_curriculum_intent, self.handle_engineering_freshman_curriculum_intent)
 
 				# ---------------------------------------------------------------------------------
 
@@ -503,9 +497,6 @@ class TourGuideSkill(MycroftSkill):
 		
 		def handle_college_science_job_placement_intent(self, message):
 				self.speak_dialog("college.science.job.placement")
-
-		def handle_engineering_fact_intent(self, message): # Should delete this one deff
-				self.speak_dialog("engineering.fact")
 
 		def handle_engineering_formula_intent(self, message):
 				self.speak_dialog("engineering.formula")
