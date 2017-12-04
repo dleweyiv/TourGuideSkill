@@ -691,7 +691,7 @@ class TourGuideSkill(MycroftSkill):
 				self.speak_dialog("st.marys.hall.directions")
 
 		def handle_techzone_directions_intent(self, message):
-				self.speak_dialog("techzone_directions")
+				self.speak_dialog("techzone.directions")
 
 		def handle_water_fountain_directions_intent(self, message):
 				self.speak_dialog("water.fountain.directions")
