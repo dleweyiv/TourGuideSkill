@@ -112,7 +112,7 @@ class TourGuideSkill(MycroftSkill):
 				# ---------------------------------------------------------------------------------
 
 				engineering_professional_development_intent = IntentBuilder("EngineeringProfessionalDevelopmentIntent"). \
-						require("EngineeringProfessionalDevelopmetKeyword").build()
+						require("EngineeringProfessionalDevelopmentKeyword").build()
 				self.register_intent(engineering_professional_development_intent, self.handle_engineering_professional_development_intent)
 
 				# ---------------------------------------------------------------------------------
@@ -281,7 +281,7 @@ class TourGuideSkill(MycroftSkill):
 
 				university_ranking_intent = IntentBuilder("UniversityRankingIntent"). \
 						require("UniversityRankingKeyword").build()
-				self.register_intent(university_ranking_intent, self.handle_univeristy_ranking_intent)
+				self.register_intent(university_ranking_intent, self.handle_university_ranking_intent)
 
 				# ---------------------------------------------------------------------------------
 
