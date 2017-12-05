@@ -1,23 +1,16 @@
 # Copyright 2017 David Lewis
 # This file is part of the Villanova tour guide mrcroft skill
-from os.path import dirname, abspath
+from os.path import dirname
 
 import sys
 import requests
 import json
 import threading
 
-sys.path.append(abspath(dirname(__file__)))
-
 from adapt.intent import IntentBuilder
 
-try:
-    from mycroft.skills.core import MycroftSkill
-except:
-    class MycroftSkill:
-        pass
-
-#from mycroft.util.log import getLogger
+from mycroft.skills.core import MycroftSkill
+from mycroft.util.log import getLogger
 
 import GPIO
 
@@ -26,15 +19,7 @@ __author__ = 'dlew'
 LOGGER = getLogger(__name__)
 
 class TourGuideSkill(MycroftSkill):
-		def on_led_change(self):
-	        	status = GPIO.get("GPIO1")
-		        #self.speak("Led is %s" % status)
-	
 		def __init__(self):
-				GPIO.on("GPIO1",self.on_led_change)
-				GPIO.on("GPIO2",self.on_led_change)
-				GPIO.on("GPIO3",self.on_led_change)
-				GPIO.on("GPIO4",self.on_led_change)
 				super(TourGuideSkill, self).__init__(name="TourGuideSkill")
 
 		def initialize(self):
@@ -481,9 +466,9 @@ class TourGuideSkill(MycroftSkill):
 		def handle_college_majors_intent(self, message):
 				#self.speak_dialog("college.majors")
 				GPIO.set("GPIO1","On")
-				GPIO.set("GPIO2","On")
+				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","On")
+				GPIO.set("GPIO4","Off")
 				#self.speak_dialog("college.majors")
 
 		def handle_college_minors_intent(self, message):
