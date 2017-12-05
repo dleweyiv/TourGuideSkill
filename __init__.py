@@ -21,6 +21,10 @@ LOGGER = getLogger(__name__)
 
 class TourGuideSkill(MycroftSkill):
 		def __init__(self):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","Off")
 				super(TourGuideSkill, self).__init__(name="TourGuideSkill")
 
 		def initialize(self):
@@ -466,10 +470,10 @@ class TourGuideSkill(MycroftSkill):
 
 		def handle_college_majors_intent(self, message):
 				#self.speak_dialog("college.majors")
-				GPIO.set("GPIO1","On")
+				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 				#self.speak_dialog("college.majors")
 
 		def handle_college_minors_intent(self, message):
