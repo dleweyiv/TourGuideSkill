@@ -12,7 +12,7 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
 
-import GPIO
+#import GPIO
 
 __author__ = 'dlew'
 
