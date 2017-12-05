@@ -15,7 +15,7 @@ except:
     class MycroftSkill:
         pass
 
-from mycroft.util.log import getLogger
+#from mycroft.util.log import getLogger
 
 import GPIO
 
