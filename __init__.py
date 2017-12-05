@@ -2,17 +2,18 @@
 # This file is part of the Villanova tour guide mrcroft skill
 from os.path import dirname
 
-import sys
 import requests
 import json
 import threading
+import sys
+from os.path import abspath, dirname
+sys.path.append(abspath(dirname(__file__)))
+import GPIO
 
 from adapt.intent import IntentBuilder
 
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
-
-#import GPIO
 
 __author__ = 'dlew'
 
