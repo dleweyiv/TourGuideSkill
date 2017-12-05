@@ -1,11 +1,13 @@
 # Copyright 2017 David Lewis
 # This file is part of the Villanova tour guide mrcroft skill
-from os.path import dirname
+from os.path import dirname, abspath
 
 import sys
 import requests
 import json
 import threading
+
+sys.path.append(abspath(dirname(__file__)))
 
 from adapt.intent import IntentBuilder
 
