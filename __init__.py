@@ -9,7 +9,12 @@ import threading
 
 from adapt.intent import IntentBuilder
 
-from mycroft.skills.core import MycroftSkill
+try:
+    from mycroft.skills.core import MycroftSkill
+except:
+    class MycroftSkill:
+        pass
+
 from mycroft.util.log import getLogger
 
 import GPIO
@@ -19,7 +24,15 @@ __author__ = 'dlew'
 LOGGER = getLogger(__name__)
 
 class TourGuideSkill(MycroftSkill):
+		def on_led_change(self):
+	        	status = GPIO.get("GPIO1")
+		        #self.speak("Led is %s" % status)
+	
 		def __init__(self):
+				GPIO.on("GPIO1",self.on_led_change)
+				GPIO.on("GPIO2",self.on_led_change)
+				GPIO.on("GPIO3",self.on_led_change)
+				GPIO.on("GPIO4",self.on_led_change)
 				super(TourGuideSkill, self).__init__(name="TourGuideSkill")
 
 		def initialize(self):
