@@ -12,6 +12,8 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
 
+import GPIO
+
 __author__ = 'dlew'
 
 LOGGER = getLogger(__name__)
@@ -462,11 +464,12 @@ class TourGuideSkill(MycroftSkill):
 				self.speak_dialog("fun.fact.villanova")
 
 		def handle_college_majors_intent(self, message):
-				self.speak_dialog("college.majors")
+				#self.speak_dialog("college.majors")
 				GPIO.set("GPIO1","On")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
+				#self.speak_dialog("college.majors")
 
 		def handle_college_minors_intent(self, message):
 				self.speak_dialog("college.minors")
