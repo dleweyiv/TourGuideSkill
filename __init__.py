@@ -2,8 +2,8 @@
 # This file is part of the Villanova tour guide mrcroft skill
 from os.path import dirname
 
-import mycroft.audio
-import time
+#import mycroft.audio
+#import time
 import requests
 import json
 import threading
@@ -476,15 +476,15 @@ class TourGuideSkill(MycroftSkill):
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
 				self.speak_dialog("college.majors")
-				time.sleep(2)
+				#time.sleep(2)
 				GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","On")
-				try:
-                	mycroft.audio.wait_while_speaking()
-            	except:
-            		time.sleep(5)
+				#try:
+                #	mycroft.audio.wait_while_speaking()
+            	#except:
+            	#	time.sleep(5)
             		GPIO.set("GPIO1","Off")
 					GPIO.set("GPIO2","Off")
 					GPIO.set("GPIO3","Off")
