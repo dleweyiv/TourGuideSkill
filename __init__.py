@@ -2,6 +2,8 @@
 # This file is part of the Villanova tour guide mrcroft skill
 from os.path import dirname
 
+import mycroft.audio
+import time
 import requests
 import json
 import threading
@@ -462,15 +464,54 @@ class TourGuideSkill(MycroftSkill):
 
 
 		def handle_fun_fact_villanova_intent(self, message):
-				self.speak_dialog("fun.fact.villanova")
-
-		def handle_college_majors_intent(self, message):
-				#self.speak_dialog("college.majors")
 				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("fun.fact.villanova")
+				time.sleep(2) 									#I put the V eyes here
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","On")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","Off")
+				try:
+                	mycroft.audio.wait_while_speaking()
+            	except:
+            		time.sleep(5)
+            		GPIO.set("GPIO1","Off")
+					GPIO.set("GPIO2","Off")
+					GPIO.set("GPIO3","Off")
+					GPIO.set("GPIO4","On")
+                	pass
+                GPIO.set("GPIO1","Off")
 				GPIO.set("GPIO2","Off")
 				GPIO.set("GPIO3","Off")
 				GPIO.set("GPIO4","On")
+
+		def handle_college_majors_intent(self, message):
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
 				self.speak_dialog("college.majors")
+				time.sleep(2)
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","On")
+				try:
+                	mycroft.audio.wait_while_speaking()
+            	except:
+            		time.sleep(5)
+            		GPIO.set("GPIO1","Off")
+					GPIO.set("GPIO2","Off")
+					GPIO.set("GPIO3","Off")
+					GPIO.set("GPIO4","On")
+                	pass
+                GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 
 		def handle_college_minors_intent(self, message):
 				GPIO.set("GPIO1","Off")
@@ -478,12 +519,74 @@ class TourGuideSkill(MycroftSkill):
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
 				self.speak_dialog("college.minors")
+				time.sleep(2)
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","On")
+				try:
+                	mycroft.audio.wait_while_speaking()
+            	except:
+            		time.sleep(5)
+            		GPIO.set("GPIO1","Off")
+					GPIO.set("GPIO2","Off")
+					GPIO.set("GPIO3","Off")
+					GPIO.set("GPIO4","On")
+                	pass
+                GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 
 		def handle_engineering_resources_intent(self, message):
-				self.speak_dialog("college.majors")
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("engineering.resources")
+				time.sleep(2)
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","On")
+				try:
+                	mycroft.audio.wait_while_speaking()
+            	except:
+            		time.sleep(5)
+            		GPIO.set("GPIO1","Off")
+					GPIO.set("GPIO2","Off")
+					GPIO.set("GPIO3","Off")
+					GPIO.set("GPIO4","On")
+                	pass
+                GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 
 		def handle_engineering_projects_trips_intent(self, message):
-				self.speak_dialog("college.majors")
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","Off")
+				self.speak_dialog("engineering.projects.trips")
+				time.sleep(2)
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","On")
+				GPIO.set("GPIO4","On")
+				try:
+                	mycroft.audio.wait_while_speaking()
+            	except:
+            		time.sleep(5)
+            		GPIO.set("GPIO1","Off")
+					GPIO.set("GPIO2","Off")
+					GPIO.set("GPIO3","Off")
+					GPIO.set("GPIO4","On")
+                	pass
+                GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 
 		def handle_alumni_network_intent(self, message):
 				self.speak_dialog("alumni.network")
