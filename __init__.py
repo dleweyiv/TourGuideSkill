@@ -176,12 +176,6 @@ class TourGuideSkill(MycroftSkill):
 
 				# ---------------------------------------------------------------------------------
 
-				nursing_facts_intent = IntentBuilder("NursingFactsIntent"). \
-						require("NursingFactsKeyword").build()
-				self.register_intent(nursing_facts_intent, self.handle_nursing_facts_intent)
-
-				# ---------------------------------------------------------------------------------
-
 				nursing_job_placement_intent = IntentBuilder("NursingJobPlacementIntent"). \
 						require("NursingJobPlacementKeyword").build()
 				self.register_intent(nursing_job_placement_intent, self.handle_nursing_job_placement_intent)
@@ -215,12 +209,6 @@ class TourGuideSkill(MycroftSkill):
 				ROTC_program_intent = IntentBuilder("ROTCProgremIntent"). \
 						require("ROTCProgramKeyword").build()
 				self.register_intent(ROTC_program_intent, self.handle_ROTC_program_intent)
-
-				# ---------------------------------------------------------------------------------
-
-				school_history_fun_facts_intent = IntentBuilder("SchoolHistoryFunFactsIntent"). \
-						require("SchoolHistoryFunFactsKeyword").build()
-				self.register_intent(school_history_fun_facts_intent, self.handle_school_history_fun_facts_intent)
 
 				# ---------------------------------------------------------------------------------
 
@@ -269,12 +257,6 @@ class TourGuideSkill(MycroftSkill):
 				sports_olympics_intent = IntentBuilder("SportsOlympicsIntent"). \
 						require("SportsOlympicsKeyword").build()
 				self.register_intent(sports_olympics_intent, self.handle_sports_olympics_intent)
-
-				# ---------------------------------------------------------------------------------
-
-				teachers_fun_fact_intent = IntentBuilder("TeachersFunFactIntent"). \
-						require("TeachersFunFactKeyword").build()
-				self.register_intent(teachers_fun_fact_intent, self.handle_teachers_fun_fact_intent)
 
 				# ---------------------------------------------------------------------------------
 
@@ -648,9 +630,6 @@ class TourGuideSkill(MycroftSkill):
 		def handle_honors_program_intent(self, message):
 				self.speak_dialog("honors.program")
 
-		def handle_nursing_facts_intent(self, message):
-				self.speak_dialog("nursing.facts")
-
 		def handle_nursing_job_placement_intent(self, message):
 				self.speak_dialog("nursing.job.placement")
 
@@ -667,10 +646,7 @@ class TourGuideSkill(MycroftSkill):
 				self.speak_dialog("retention.rate")
 
 		def handle_ROTC_program_intent(self, message):
-				self.speak_dialog("ROTC.program")
-
-		def handle_school_history_fun_facts_intent(self, message):
-				self.speak_dialog("school.history.fun.facts")
+				self.speak_dialog("rotc.program")
 
 		def handle_service_fun_facts_intent(self, message):
 				self.speak_dialog("service.fun.facts")
@@ -695,9 +671,6 @@ class TourGuideSkill(MycroftSkill):
 
 		def handle_sports_olympics_intent(self, message):
 				self.speak_dialog("sports.olympics")
-
-		def handle_teachers_fun_fact_intent(self, message):
-				self.speak_dialog("teachers.fun.fact")
 
 		def handle_total_enrollment_intent(self, message):
 				self.speak_dialog("total.enrollment")
